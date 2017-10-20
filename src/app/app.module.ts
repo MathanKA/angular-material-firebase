@@ -14,12 +14,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { ProgressWizardComponent } from './progress-wizard/progress-wizard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserDetailComponent } from './user-profile/user-detail/user-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProgressWizardComponent
+    ProgressWizardComponent,
+    UserProfileComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -2,16 +2,7 @@
   <mat-card>
       <mat-horizontal-stepper [linear]="false">
           <mat-step label="Fill out your name">
-            <mat-form-field>
-              <input matInput placeholder="First Name">
-            </mat-form-field>
-
-            <mat-form-field>
-              <input matInput placeholder="Last Name">
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperNext type="button">Next</button>
-            </div>
+              <app-user-detail></app-user-detail>
           </mat-step>
 
           <mat-step label="Fill out your phone number">
