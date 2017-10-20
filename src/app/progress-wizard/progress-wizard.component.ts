@@ -8,8 +8,9 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./progress-wizard.component.css']
 })
 export class ProgressWizardComponent implements OnInit {
-  formGroup1: FormGroup;
-  formGroup2: FormGroup;
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
 
   constructor() { }
 

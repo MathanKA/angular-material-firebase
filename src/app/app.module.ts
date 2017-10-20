@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatStepperModule, MatCardModule} from '@angular/material';
+import {MatStepperModule, MatCardModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -31,7 +31,9 @@ import { ProgressWizardComponent } from './progress-wizard/progress-wizard.compo
     MatCheckboxModule,
     MatStepperModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

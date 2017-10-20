@@ -1,5 +1,45 @@
 <div class="progress-wizard" fxLayout="row" fxLayoutAlign="center center">
   <mat-card>
-    <button mat-raised-button color="primary">Primary</button>
+      <mat-horizontal-stepper [linear]="false">
+          <mat-step label="Fill out your name">
+            <mat-form-field>
+              <input matInput placeholder="First Name">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Last Name">
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext type="button">Next</button>
+            </div>
+          </mat-step>
+
+          <mat-step label="Fill out your phone number">
+            <mat-form-field>
+              <input matInput placeholder="Phone number">
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious type="button">Back</button>
+              <button mat-button matStepperNext type="button">Next</button>
+            </div>
+          </mat-step>
+
+          <mat-step label="Fill out your address">
+            <mat-form-field>
+              <input matInput placeholder="Address">
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious type="button">Back</button>
+              <button mat-button matStepperNext type="button">Next</button>
+            </div>
+          </mat-step>
+
+          <mat-step label="Confirm your information">
+            Everything seems correct.
+            <div>
+              <button mat-button>Done</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
   </mat-card>
 </div>
