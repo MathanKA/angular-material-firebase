@@ -1,5 +1,8 @@
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
-/* body,html {
+body,html {
   margin: 0;
   padding: 0;
-} */
+}
+a {
+  cursor: pointer;
+}
