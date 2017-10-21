@@ -1,0 +1,20 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <form class="user-detail-form" [formGroup]="userForm" (ngSubmit)="onUserSubmit()">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-form-field fxFlex="49">
+          <input type="text" matInput placeholder="First Name" id="fname" formControlName="fname">
+        </mat-form-field>
+        <mat-form-field fxFlex="49">
+          <input type="text" matInput placeholder="Last Name" id="lname" formControlName="lname">
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-form-field fxFlex="100">
+          <input type="text" matInput placeholder="Enter Email" required id="email" formControlName="email">
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end end">
+        <button mat-raised-button color="primary" [disabled]= "!userForm.valid">Save</button>
+      </div>
+    </form>
+  </div>

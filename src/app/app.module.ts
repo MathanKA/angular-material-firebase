@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { ProgressWizardComponent } from './progress-wizard/progress-wizard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserDetailComponent } from './user-profile/user-detail/user-detail.component';
+import { UserEditComponent } from './user-profile/user-edit/user-edit.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { UserDetailComponent } from './user-profile/user-detail/user-detail.comp
     AppComponent,
     ProgressWizardComponent,
     UserProfileComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
