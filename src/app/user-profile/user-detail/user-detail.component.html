@@ -1,13 +1,20 @@
 <div fxLayout="column" fxLayoutAlign="center center">
-  <form>
-    <mat-form-field>
-      <input type="text" matInput placeholder="First Name">
-    </mat-form-field>
-    <mat-form-field>
-      <input type="text" matInput placeholder="Last Name">
-    </mat-form-field>
-    <mat-form-field >
-      <textarea matInput placeholder="Address"></textarea>
-    </mat-form-field>
+  <form class="user-detail-form">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-form-field fxFlex="49">
+        <input type="text" matInput placeholder="First Name">
+      </mat-form-field>
+      <mat-form-field fxFlex="49">
+        <input type="text" matInput placeholder="Last Name">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-form-field fxFlex="100">
+        <input type="text" matInput placeholder="Enter Email" required>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end end">
+      <button mat-raised-button color="primary">Save</button>
+    </div>
   </form>
 </div>
