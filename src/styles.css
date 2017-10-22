@@ -3,6 +3,24 @@ body,html {
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #ebebeb;
+  font-family: 'Raleway', sans-serif;
+}
 a {
   cursor: pointer;
+}
+h1,h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+}
+mat-card h1 {
+  font-weight: 600;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+mat-card p {
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
 }

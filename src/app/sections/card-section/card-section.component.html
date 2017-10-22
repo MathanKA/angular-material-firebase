@@ -1,0 +1,9 @@
+<div id="card-container" fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-card *ngFor = "let card of cardContents">
+    <h1>{{ card.title}}</h1>
+    <p> {{ card.content }}</p>
+    <mat-card-actions>
+      <button mat-raised-button color="accent">{{card.btnName}}</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -6,8 +6,8 @@ import { HttpModule } from '@angular/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatStepperModule, MatCardModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatIconModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule} from '@angular/material';
+import {MatStepperModule, MatCardModule, MatFormFieldModule, MatInputModule, MatToolbarModule} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -18,6 +18,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserDetailComponent } from './user-profile/user-detail/user-detail.component';
 import { UserEditComponent } from './user-profile/user-edit/user-edit.component';
 import { HeaderComponent } from './header/header.component';
+import { FirstSectionComponent } from './sections/first-section/first-section.component';
+import { FooterComponent } from './footer/footer.component';
+import { CardSectionComponent } from './sections/card-section/card-section.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { HeaderComponent } from './header/header.component';
     UserProfileComponent,
     UserDetailComponent,
     UserEditComponent,
-    HeaderComponent
+    HeaderComponent,
+    FirstSectionComponent,
+    FooterComponent,
+    CardSectionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,8 @@ import { HeaderComponent } from './header/header.component';
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

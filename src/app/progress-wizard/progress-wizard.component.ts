@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-progress-wizard',
   templateUrl: './progress-wizard.component.html',
-  styleUrls: ['./progress-wizard.component.css']
+  styleUrls: ['./progress-wizard.component.scss']
 })
 export class ProgressWizardComponent implements OnInit {
   isLinear = false;
