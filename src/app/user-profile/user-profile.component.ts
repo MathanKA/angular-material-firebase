@@ -8,7 +8,6 @@ import { UserInfo } from '../shared/user.model';
 })
 export class UserProfileComponent implements OnInit {
 
-
   constructor() { }
 
   ngOnInit() {
