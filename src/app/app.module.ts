@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { AppRoutingModule } from './app-routing.module';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -22,6 +22,9 @@ import { FirstSectionComponent } from './sections/first-section/first-section.co
 import { FooterComponent } from './footer/footer.component';
 import { CardSectionComponent } from './sections/card-section/card-section.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+
 
 
 @NgModule({
@@ -35,13 +38,16 @@ import { HomeComponent } from './home/home.component';
     FirstSectionComponent,
     FooterComponent,
     CardSectionComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
