@@ -1,3 +1,32 @@
-<p>
-  contact works!
-</p>
+<div class="contact-component" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card>
+    <div class="text-center">
+      <h2>Contact Form</h2>
+    </div>
+    <mat-card-content>
+      <form (ngSubmit)="onContactSubmit(cf)" #cf="ngForm">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field fxFlex="49">
+            <input type="text" matInput placeholder="First Name" id="fname" name="fname" ngModel>
+          </mat-form-field>
+          <mat-form-field fxFlex="49">
+            <input type="text" matInput placeholder="Last Name" id="lname" name="lname" ngModel>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field fxFlex="100">
+            <input type="text" matInput placeholder="Enter Email" required id="email" name="email" ngModel>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field fxFlex>
+            <textarea matInput placeholder="Enter Message" name="message" ngModel></textarea>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end end">
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
