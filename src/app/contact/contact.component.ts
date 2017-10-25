@@ -20,10 +20,12 @@ export class ContactComponent implements OnInit {
   onContactSubmit(cform: NgForm) {
     const Value = cform.value;
     const formValues = new Contact(Value.fname, Value.lname, Value.email, Value.message);
-    this.dataStorageService.saveDataFom(formValues);
-      // .subscribe((response) => {
-      //   console.log(response);
-      // });
+    this.dataStorageService.saveDataFom(formValues)
+      .subscribe((response: Response) => {
+        console.log(response);
+        return response;
+      }
+    );
   }
 
 }
