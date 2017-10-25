@@ -21,7 +21,7 @@ export class AlertService {
     config.verticalPosition = this.verticalPosition;
     config.horizontalPosition = this.horizontalPosition;
     config.duration = this.setAutoHide ? this.autoHide : 0;
-    this.snackBar.open(msg, 'Ok', config);
+    this.snackBar.open(msg, 'null', config);
   }
 
 }

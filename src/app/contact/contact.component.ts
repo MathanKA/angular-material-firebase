@@ -19,14 +19,15 @@ export class ContactComponent implements OnInit {
   }
 
   onContactSubmit(cform: NgForm) {
-    const Value = cform.value;
-    const formValues = new Contact(Value.fname, Value.lname, Value.email, Value.message);
-    this.dataStorageService.saveDataFom(formValues)
-      .subscribe((response: Response) => {
-        this.alertService.showAlert('Form is submitted successfully');
-        return response;
-      }
-    );
+    if (!!cform.valid) {
+      const Value = cform.value;
+      const formValues = new Contact(Value.fname, Value.lname, Value.email, Value.message);
+      this.dataStorageService.saveDataFom(formValues)
+        .subscribe((response: Response) => {
+          this.alertService.showAlert('Form is submitted successfully');
+          cform.reset();
+          return response;
+        });
+    }
   }
-
 }
