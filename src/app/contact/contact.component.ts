@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Contact } from './contact.model';
 import { DataStorageService } from '../shared/data-storage.service';
 import { Response } from '@angular/http';
+import { AlertService } from '../shared/alert.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { Response } from '@angular/http';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private dataStorageService: DataStorageService) { }
+  constructor(private dataStorageService: DataStorageService, private alertService: AlertService) { }
 
   ngOnInit() {
   }
@@ -22,7 +23,7 @@ export class ContactComponent implements OnInit {
     const formValues = new Contact(Value.fname, Value.lname, Value.email, Value.message);
     this.dataStorageService.saveDataFom(formValues)
       .subscribe((response: Response) => {
-        console.log(response);
+        this.alertService.showAlert('Form is submitted successfully');
         return response;
       }
     );

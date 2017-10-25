@@ -7,7 +7,7 @@
       <form (ngSubmit)="onContactSubmit(cf)" #cf="ngForm">
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <mat-form-field fxFlex="49">
-            <input type="text" matInput placeholder="First Name" id="fname" name="fname" ngModel>
+            <input type="text" matInput placeholder="First Name" id="fname" name="fname" ngModel required>
           </mat-form-field>
           <mat-form-field fxFlex="49">
             <input type="text" matInput placeholder="Last Name" id="lname" name="lname" ngModel>
@@ -15,16 +15,16 @@
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <mat-form-field fxFlex="100">
-            <input type="text" matInput placeholder="Enter Email" required id="email" name="email" ngModel>
+            <input type="text" matInput placeholder="Enter Email"  id="email" name="email" ngModel required>
           </mat-form-field>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <mat-form-field fxFlex>
-            <textarea matInput placeholder="Enter Message" name="message" ngModel rows="6"></textarea>
+            <textarea matInput placeholder="Enter Message" name="message" ngModel rows="6" required></textarea>
           </mat-form-field>
         </div>
         <div fxLayout="row" fxLayoutAlign="end end">
-          <button mat-raised-button color="primary" type="submit">Submit</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]=!cf.valid >Submit</button>
         </div>
       </form>
     </mat-card-content>
