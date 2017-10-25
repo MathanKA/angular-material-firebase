@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Contact } from './contact.model';
+import { DataStorageService } from '../shared/data-storage.service';
+import { Response } from '@angular/http';
+
 
 @Component({
   selector: 'app-contact',
@@ -9,7 +12,7 @@ import { Contact } from './contact.model';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataStorageService: DataStorageService) { }
 
   ngOnInit() {
   }
@@ -17,7 +20,10 @@ export class ContactComponent implements OnInit {
   onContactSubmit(cform: NgForm) {
     const Value = cform.value;
     const formValues = new Contact(Value.fname, Value.lname, Value.email, Value.message);
-    console.log(formValues);
+    this.dataStorageService.saveDataFom(formValues);
+      // .subscribe((response) => {
+      //   console.log(response);
+      // });
   }
 
 }
