@@ -17,7 +17,7 @@
     "starter-template",
     "ngx"
   ],
-  "repository": "https://github.com/jeroenouw/AngularMaterialFirebase",
+  "repository": "https://github.com/MathanKA/angular-material-firebase",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
