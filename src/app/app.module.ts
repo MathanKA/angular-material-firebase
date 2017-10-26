@@ -26,6 +26,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DataStorageService } from './shared/data-storage.service';
 import { AlertService } from './shared/alert.service';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 
@@ -42,7 +44,9 @@ import { AlertService } from './shared/alert.service';
     CardSectionComponent,
     HomeComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
