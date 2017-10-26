@@ -17,6 +17,10 @@ export class AuthService {
       .then(
         response => {
           this.alertService.showAlert('Account Created Successfully. Please check your email to verify the account.');
+          firebase.auth().currentUser.getIdToken()
+            .then(
+              (token: string) => this.token = token
+            );
           setTimeout(() => {
             this.router.navigate(['/']);
           }, 3000);
@@ -52,7 +56,9 @@ export class AuthService {
           this.router.navigate(['/']);
           firebase.auth().currentUser.getIdToken()
             .then(
-              (token: string) => this.token = token
+              (token: string) => {
+                return this.token = token;
+              }
             );
         }
       )
@@ -72,29 +78,30 @@ export class AuthService {
           const currentUser = result.user;
       })
       .then(response => {
-              this.router.navigate(['/']);
-              firebase.auth().currentUser.getIdToken()
-              .then(
-                  (token: string) => this.token = token
-              );
-          this.alertService.showAlert('Google login succesful');
-          }
-      )
+        this.router.navigate(['/']);
+        firebase.auth().currentUser.getIdToken()
+          .then(
+            (token: string) => {
+              return this.token = token;
+            }
+          );
+        this.alertService.showAlert('Google login succesful');
+      })
       .catch(
-          error => {
-            this.alertService.showAlert(error.message);
-            return error.message;
-          }
-      );
+        error => {
+          this.alertService.showAlert(error.message);
+          return error.message;
+        });
   }
 
-  isAuthenticated(){
+  isAuthenticated() {
     return this.token != null;
   }
 
   logout(){
     firebase.auth().signOut();
     this.token = null;
+    this.alertService.showAlert('Logout Successful');
   }
 
 }
