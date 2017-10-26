@@ -22,6 +22,5 @@ export class SignupComponent implements OnInit {
 
   onSignupGoogle(signup: NgForm){
     this.authService.googleSignup();
-
   }
 }

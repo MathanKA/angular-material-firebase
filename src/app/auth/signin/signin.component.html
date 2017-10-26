@@ -1,3 +1,31 @@
-<p>
-  signin works!
-</p>
+<div class="signinClass" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card>
+    <div class="text-center">
+      <h2>Sign In</h2>
+    </div>
+    <mat-card-content>
+      <form (ngSubmit)="onSignin(si)" #si="ngForm">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field fxFlex="100">
+            <input type="text" matInput placeholder="Enter Email"  id="email" name="email" ngModel required>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field fxFlex="100">
+            <input type="password" matInput placeholder="Enter Password"  id="password" name="password" ngModel required>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end end">
+          <button mat-raised-button color="primary" type="submit" [disabled] = si.invalid>Sign In</button>
+        </div>
+      </form>
+        <p class="text-center">OR</p>
+      <form (ngSubmit)="onSigninGoogle(sig)" #sig="ngForm">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <button mat-button class="google-btn" type="submit"></button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

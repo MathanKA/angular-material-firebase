@@ -1,0 +1,15 @@
+.signinClass {
+  min-height: 100%;
+  margin: 50px 0px;
+  mat-card {
+    width: 400px;
+  }
+  .google-btn {
+    background-image: url('../../../assets/button-bg/google-btn.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 54%;
+    height:46px;
+
+  }
+}
