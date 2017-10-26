@@ -1,7 +1,23 @@
 {
-  "name": "dasboard-app",
+  "name": "ng-mat-app",
   "version": "0.0.0",
+  "author": "Mathan K A",
   "license": "MIT",
+  "description": "A Starter application with angular 4 +, Material 2 and Firebase",
+  "keywords": [
+    "angular",
+    "angular 4",
+    "firebase",
+    "material",
+    "material 2",
+    "oauth",
+    "template",
+    "crud",
+    "flex-layout",
+    "starter-template",
+    "ngx"
+  ],
+  "repository": "https://github.com/jeroenouw/AngularMaterialFirebase",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
