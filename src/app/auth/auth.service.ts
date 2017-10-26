@@ -20,7 +20,6 @@ export class AuthService {
           setTimeout(() => {
             this.router.navigate(['/']);
           }, 3000);
-
         }
       )
       .catch(
@@ -29,5 +28,20 @@ export class AuthService {
           return error.message;
         }
       );
+  }
+
+  // Google SignUp
+  googleSignup(){
+    const GoogleProvider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(GoogleProvider)
+      .then(result => {
+        if (result.credential) {
+          const token = result.credential.accessToken;
+        }
+        this.router.navigate(['/']);
+      })
+      .catch(error => {
+          console.log(error);
+      });
   }
 }
