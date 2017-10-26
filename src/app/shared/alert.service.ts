@@ -9,7 +9,7 @@ import {
 @Injectable()
 export class AlertService {
   setAutoHide = true;
-  autoHide= 10000;
+  autoHide= 20000;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 

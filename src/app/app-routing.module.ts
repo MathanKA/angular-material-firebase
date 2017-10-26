@@ -2,10 +2,12 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HomeComponent } from './home/home.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule} from '@angular/router';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
+
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule} from '@angular/router';
+
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},

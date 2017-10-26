@@ -1,3 +1,24 @@
-<p>
-  signup works!
-</p>
+<div class="signupClass" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card>
+    <div class="text-center">
+      <h2>Sign Up</h2>
+    </div>
+    <mat-card-content>
+      <form (ngSubmit)="onSignup(sf)" #sf="ngForm">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field fxFlex="100">
+            <input type="text" matInput placeholder="Enter Email"  id="email" name="email" ngModel required>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-form-field fxFlex="100">
+            <input type="password" matInput placeholder="Enter Password"  id="password" name="password" ngModel required>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end end">
+          <button mat-raised-button color="primary" type="submit" [disabled] = sf.invalid>Sign Up</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
