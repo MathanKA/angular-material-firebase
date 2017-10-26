@@ -1,4 +1,7 @@
 #card-container {
-  height: 300px!important;
+  height: 350px!important;
+  mat-card-actions {
+    margin-left: 0px;
+  }
 }
 

@@ -11,7 +11,7 @@ a {
   cursor: pointer;
 }
 h1,h2,h3,h4,h5,h6,p {
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
@@ -29,4 +29,50 @@ mat-card p {
 .text-right {
   text-align: right;
 }
-
+/*Scroll bar starts*/
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+body::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #e91e63;
+}
+body::scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+body::scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+body::scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #e91e63;
+}
+::-moz-selection {
+  color: #fff;
+  background-color: #e91e63;
+}
+::selection {
+  color: #fff;
+  background-color: #e91e63;
+}
