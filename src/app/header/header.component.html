@@ -4,9 +4,9 @@
     <a mat-button routerLink="/about">About</a>
     <a mat-button routerLink="/contact">Contact</a>
     <span class="fill-remaining"></span>
-    <a *ngIf="!authService.isAuthenticated()" mat-button routerLink="/signup"><mat-icon>person_add</mat-icon> Register</a>
-    <a *ngIf="!authService.isAuthenticated()" mat-button routerLink="/signin"><mat-icon>lock_open</mat-icon> Sign In</a>
-    <a *ngIf="authService.isAuthenticated()" mat-icon-button [matMenuTriggerFor]="appMenu"><mat-icon>more_vert</mat-icon></a>
+    <a *ngIf="!isAuthenticated()" mat-button routerLink="/signup"><mat-icon>person_add</mat-icon> Register</a>
+    <a *ngIf="!isAuthenticated()" mat-button routerLink="/signin"><mat-icon>lock_open</mat-icon> Sign In</a>
+    <a *ngIf="isAuthenticated()" mat-icon-button [matMenuTriggerFor]="appMenu"><mat-icon>more_vert</mat-icon></a>
     <mat-menu #appMenu="matMenu">
       <a mat-menu-item routerLink="/profile"><mat-icon>face</mat-icon><span>Profile</span></a>
       <a (click)="onLogout()" mat-menu-item>
